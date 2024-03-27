@@ -13,11 +13,18 @@
 ActiveRecord::Schema.define(version: 2024_03_26_143610) do
 
   create_table "products", force: :cascade do |t|
+    t.string "product_name"
+    t.integer "seller"
+    t.integer "stock"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.boolean "seller_flg"
+    t.string "mail_address"
+    t.string "pass_word"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

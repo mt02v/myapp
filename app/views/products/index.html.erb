@@ -1,1 +1,9 @@
 このページはproducts#indexです。
+<% @products.each do |data| %>
+<div>
+  <%= link_to "#{data.product_name}", product_url(data.id), method: :post 
+  <%= data.product_name %>
+  <%= data.seller %>
+  <%= data.stck %>
+</div>
+<% end %>
